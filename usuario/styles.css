@@ -1,0 +1,267 @@
+/* ======= Global Styles ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  background-color: #fff;
+}
+
+#app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(230, 29, 49, 0.05);
+}
+
+/* ======= Styles for Home Screen ======= */
+body.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la pantalla */
+}
+
+#app.home {
+  width: 100%;
+  height: 80%;
+  border: 1px solid rgba(230, 29, 49, 0.1);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+h1,
+p {
+  margin: 10px auto;
+  max-width: 80%;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  color: #3d280a;
+}
+
+h1 span {
+  color: #e61d31;
+  font-weight: bold;
+}
+
+p {
+  color: #5a2d0c;
+  font-size: 1.2rem;
+}
+
+.juanValdezCup {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 20px 0;
+  flex-grow: 1;
+}
+
+#startBtn {
+  background-color: #e4002b;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#startBtn:hover {
+  background-color: #c20026;
+}
+
+/* ======= Styles for Form Screen ======= */
+body.form {
+  background-color: #fefefe;
+  display: flex; /* Centrado vertical y horizontal */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Toda la pantalla */
+}
+
+#app.form {
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Los elementos en columna */
+  align-items: center; /* Centrar horizontalmente */
+  justify-content: center; /* Centrar verticalmente */
+}
+
+header {
+  background-color: #c4002f;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+header img {
+  height: 40px;
+  vertical-align: middle;
+}
+
+#questionsContainer {
+  margin: 20px 0;
+  text-align: center; /* Centrar el texto */
+}
+
+#questionsContainer label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: lighter; /* Etiqueta más ligera */
+  color: #333;
+}
+
+input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #c4002f;
+}
+
+/* Botones con espacio */
+.navigation-buttons {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 15px; /* Espaciado entre botones */
+  margin-top: 20px; /* Espaciado con respecto al resto del formulario */
+}
+
+button {
+  background-color: #c4002f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:disabled {
+  background-color: #e3e3e3;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #b30029;
+}
+
+#submitBtn {
+  background-color: #b30029;
+}
+
+#submitBtn:hover {
+  background-color: #c4002f;
+}
+
+/* ======= Responsive Styles ======= */
+@media (max-width: 768px) {
+  #app {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  #imagen-bebida {
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 8px; /* Suaviza las esquinas */
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .juanValdezCup {
+    max-width: 200px;
+  }
+}
+
+/* ======= Styles for Recommendation Screen ======= */
+body.recommendation {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la pantalla */
+}
+
+#app.recommendation {
+  text-align: center;
+}
+
+#app.recommendation header {
+  background-color: #c4002f;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+#imagen-bebida {
+  max-width: 100%;
+  margin: 20px auto;
+  border-radius: 8px; /* Suaviza las esquinas */
+}
+
+#app.recommendation h3 {
+  font-size: 1.8rem;
+  color: #3d280a;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+#app.recommendation p {
+  font-size: 1rem;
+  color: #5a2d0c;
+  margin-bottom: 10px;
+}
+
+#tamano-bebida {
+  font-weight: bold;
+  color: #3d280a;
+  margin: 10px 0;
+}
+
+.recommendation-buttons {
+  display: flex;
+  flex-direction: column; /* Botones en columna */
+  gap: 15px; /* Espaciado entre los botones */
+  margin-top: 20px;
+}
+
+.recommendation-buttons button {
+  background-color: #c4002f;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%; /* Botones ocupan todo el ancho */
+}
+
+.recommendation-buttons button:hover {
+  background-color: #b30029;
+}
+
+#cancelOrderBtn {
+  background-color: #e61d31;
+}
+
+#cancelOrderBtn:hover {
+  background-color: #c20026;
+}
